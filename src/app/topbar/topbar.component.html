@@ -1,0 +1,26 @@
+<div class="topbar">
+    <div class="search-bar">
+      <input type="text" placeholder="Rechercher...">
+      <i class="material-icons">search</i>
+    </div>
+    
+    <div class="topbar-actions">
+      <div class="notifications">
+        <i class="material-icons">notifications</i>
+      </div>
+      
+      <div class="user-profile">
+        <span>Utilisateur</span>
+        <img src="assets/avatar.png" alt="Avatar">
+        
+        <div class="dropdown-menu">
+          <ul>
+            <li>Mon profil</li>
+            <li>Paramètres</li>
+            <li (click)="logout()">Déconnexion</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
