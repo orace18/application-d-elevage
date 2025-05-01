@@ -1,0 +1,48 @@
+<div class="container mt-5">
+    <h2 class="mb-4">Enregistrement de la Production</h2>
+  
+    <form>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="espece">Espèce</label>
+            <input type="text" class="form-control" id="espece" [(ngModel)]="production.espece" name="espece" placeholder="Ex : Poule ou Canard">
+          </div>
+          
+  
+        <div class="col-md-6 mb-3">
+          <label for="race">Race (optionnel)</label>
+          <input type="text" class="form-control" id="race" [(ngModel)]="production.race" name="race">
+        </div>
+  
+        <div class="col-md-6 mb-3">
+          <label for="males">Nombre de mâles</label>
+          <input type="number" class="form-control" id="males" [(ngModel)]="production.males" name="males">
+        </div>
+  
+        <div class="col-md-6 mb-3">
+          <label for="femelles">Nombre de femelles</label>
+          <input type="number" class="form-control" id="femelles" [(ngModel)]="production.femelles" name="femelles">
+        </div>
+  
+        <div class="col-md-6 mb-3">
+          <label for="dateEnregistrement">Date d'enregistrement</label>
+          <input type="date" class="form-control" id="dateEnregistrement" [(ngModel)]="production.dateEnregistrement" name="dateEnregistrement" readonly>
+        </div>
+  
+        <div class="col-md-6 mb-3">
+          <label for="zone">Enclos ou zone</label>
+          <input type="text" class="form-control" id="zone" [(ngModel)]="production.zone" name="zone">
+        </div>
+  
+        <div class="col-md-12 mb-4">
+          <label for="remarques">Remarques (optionnel)</label>
+          <textarea class="form-control" id="remarques" rows="3" [(ngModel)]="production.remarques" name="remarques"></textarea>
+        </div>
+      </div>
+  
+      <div class="text-end">
+        <button type="button" class="btn btn-primary" (click)="enregistrerProduction()">Enregistrer</button>
+      </div>
+    </form>
+  </div>
+  
