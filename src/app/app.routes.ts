@@ -7,32 +7,41 @@ import { AuthGuard } from './guards/auth.guard';
 import { AlimentationComponent } from './alimentation/alimentation.component';
 import { ProductionComponent } from './production/production.component';
 import { RevenuComponent } from './Revenue/revenu.component';
+import { MainComponentComponent } from '../main-component/main-component.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { 
-    path: 'dashboard', 
-    component: DashboardComponent, 
-    canActivate: [AuthGuard] 
-  },
+
   {
-    path: 'alimentation',
-    component: AlimentationComponent,
-    canActivate: [AuthGuard] 
-  },
-  {
-    path: 'productions',
-    component: ProductionComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'revenu',
-    component:RevenuComponent,
-    canActivate: [AuthGuard]
+    path: '',
+    component: MainComponentComponent,
+    canActivate: [AuthGuard],
+    children: [
+      {
+        path: 'dashboard',
+        component: DashboardComponent,
+        /* canActivate: [AuthGuard] */
+      },
+      {
+        path: 'alimentation',
+        component: AlimentationComponent,
+        /* canActivate: [AuthGuard] */
+      },
+      {
+        path: 'productions',
+        component: ProductionComponent,
+        /* canActivate: [AuthGuard] */
+      },
+      {
+        path: 'revenu',
+        component: RevenuComponent,
+      /*   canActivate: [AuthGuard] */
+      },
+    ]
   },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
-  
+
 ];
 
 @NgModule({

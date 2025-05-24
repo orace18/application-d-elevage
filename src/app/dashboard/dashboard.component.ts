@@ -6,8 +6,7 @@ import { TopbarComponent } from '../topbar/topbar.component';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [SidebarComponent,
-    TopbarComponent
+  imports: [
   ],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
