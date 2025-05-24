@@ -1,0 +1,75 @@
+<div class="container mt-5">
+    <h2 class="mb-4">Ajouter une alimentation</h2>
+  
+    <form>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="nom" class="form-label">Nom de l'alimentation</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nom"
+            [(ngModel)]="alimentation.nom"
+            name="nom"
+            required
+          />
+        </div>
+  
+        <div class="col-md-6 mb-3">
+          <label for="quantite" class="form-label">Quantité (en kg)</label>
+          <input
+            type="number"
+            class="form-control"
+            id="quantite"
+            [(ngModel)]="alimentation.quantite"
+            name="quantite"
+            required
+          />
+        </div>
+  
+        <div class="col-md-6 mb-3">
+          <label for="dateLivraison" class="form-label">Date de livraison</label>
+          <input
+            type="date"
+            class="form-control"
+            id="dateLivraison"
+            [(ngModel)]="alimentation.dateLivraison"
+            name="dateLivraison"
+            required
+          />
+        </div>
+  
+        <div class="col-md-6 mb-3">
+          <label for="datePeremption" class="form-label">Date de péremption</label>
+          <input
+            type="date"
+            class="form-control"
+            id="datePeremption"
+            [(ngModel)]="alimentation.datePeremption"
+            name="datePeremption"
+            required
+          />
+        </div>
+  
+        <div class="col-md-6 mb-4">
+          <label for="statut" class="form-label">Statut</label>
+          <select
+            class="form-select"
+            id="statut"
+            [(ngModel)]="alimentation.statut"
+            name="statut"
+            required
+          >
+            <option value="en stock">En stock</option>
+            <option value="ouvert">Ouvert</option>
+            <option value="épuisé">Épuisé</option>
+          </select>
+        </div>
+      </div>
+  
+      <div class="text-end">
+        <button class="btn btn-success" (click)="ajouterAlimentation()">Enregistrer</button>
+      </div>
+    </form>
+  </div>
+  

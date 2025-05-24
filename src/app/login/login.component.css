@@ -51,7 +51,7 @@
   .btn-primary {
     width: 100%;
     padding: 12px;
-    background-color: #007bff;
+    background-color: #ffa600;
     border: none;
     border-radius: 4px;
     color: white;
@@ -61,11 +61,11 @@
   }
   
   .btn-primary:hover {
-    background-color: #0069d9;
+    background-color: #ffa600;
   }
   
   .btn-primary:disabled {
-    background-color: #7cb6ff;
+    background-color: #ffa600;
     cursor: not-allowed;
   }
   

@@ -14,7 +14,7 @@ export class SidebarComponent {
     { name: 'Tableau de bord', icon: 'dashboard', route: '/dashboard' },
     { name: 'Productions', icon: 'people', route: '/productions' },
     { name: 'Alimentation', icon: 'settings', route: '/alimentation' },
-    { name: 'Revenue', icon: 'help', route: '/help' },
+    { name: 'Revenue', icon: 'help', route: '/revenu' },
     { name: 'Déconnexion', icon: 'logout', route: '/logout' }
   ];
 

@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <h3 class="mb-4">Saisie de revenu</h3>
+    <form>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label>Prix par mâle vendu (FCFA)</label>
+          <input type="number" class="form-control" [(ngModel)]="revenu.prixMale" name="prixMale" required>
+        </div>
+  
+        <div class="col-md-6 mb-3">
+          <label>Prix par femelle vendue (FCFA)</label>
+          <input type="number" class="form-control" [(ngModel)]="revenu.prixFemelle" name="prixFemelle" required>
+        </div>
+  
+        <div class="col-md-6 mb-3">
+          <label>Nombre de mâles vendus</label>
+          <input type="number" class="form-control" [(ngModel)]="revenu.nbMalesVendus" name="nbMalesVendus" required>
+        </div>
+  
+        <div class="col-md-6 mb-3">
+          <label>Nombre de femelles vendues</label>
+          <input type="number" class="form-control" [(ngModel)]="revenu.nbFemellesVendues" name="nbFemellesVendues" required>
+        </div>
+  
+        <div class="col-md-6 mb-4">
+          <label>Date de la vente</label>
+          <input type="date" class="form-control" [(ngModel)]="revenu.dateVente" name="dateVente" readonly>
+        </div>
+      </div>
+  
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-success" (click)="enregistrerRevenu()">Enregistrer</button>
+      </div>
+    </form>
+  </div>
+  
